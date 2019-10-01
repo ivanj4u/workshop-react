@@ -1,4 +1,10 @@
 {
   "name": "Workshop",
-  "displayName": "Workshop"
+  "displayName": "Workshop",
+  "expo": {
+    "name": "Workshop",
+    "slug": "workshop-app",
+    "sdkVersion": "31.0.0"
+  },
+  "react-native": "0.61.1"
 }
