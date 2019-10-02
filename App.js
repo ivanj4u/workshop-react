@@ -1,24 +1,19 @@
 import React, {Component} from 'react';
-import {FlatList, SafeAreaView, StyleSheet} from "react-native";
-import ListItem, {Separator} from "./src/ListItem";
+import {StyleSheet, View} from "react-native";
+import {FlatList} from "react-native-gesture-handler";
+import SwipeableRow from "./src/SwipeableRow";
 
 export default class App extends Component {
     render() {
         return (
-            <SafeAreaView style={styles.container}>
-                <FlatList
-                    data={goods}
-                    keyExtractor={item => item.id}
-                    renderItem={({item}) => (
-                        <ListItem
-                            {...item}
-                            onSwipeFromLeft={() => alert('swiped from left')}
-                            onRightPress={() => alert('pressed right')}
-                        />
-                    )}
-                    ItemSeparatorComponent={() => <Separator/>}
-                />
-            </SafeAreaView>
+            <FlatList
+                data={DATA}
+                ItemSeparatorComponent={() => <View style={styles.separator} />}
+                renderItem={({ item, index }) => (
+                    <SwipeableRow item={item} index={index} />
+                )}
+                keyExtractor={(item, index) => `message ${index}`}
+            />
         )
     }
 }
