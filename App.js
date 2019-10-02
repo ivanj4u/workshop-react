@@ -1,15 +1,15 @@
 import React from 'react';
 import {createAppContainer} from 'react-navigation'
-import {Drawer} from "./src/config/Router";
+import {TabBottomNavigation} from "./src/config/Router";
 import {StyleSheet, View} from "react-native";
 
-const NavPage = createAppContainer(Drawer);
+const TabBottomPage = createAppContainer(TabBottomNavigation);
 
 export default class App extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <NavPage/>
+                <TabBottomPage/>
             </View>
         )
     }

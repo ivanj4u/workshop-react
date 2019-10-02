@@ -28,7 +28,7 @@ export default class App extends Component {
             <ScrollView>
                 <View>
                     <Button
-                        title="Daftar"
+                        title="Daftar Budaya"
                     ></Button>
                 </View>
 

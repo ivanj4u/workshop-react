@@ -7,20 +7,15 @@ export default class HelloWorldApp extends Component {
             <View style={styles.display}>
                 <View style={styles.inline}>
                     <View>
-                        <Text style={styles.navigationText}>
+                        <Text style={styles.titleText}>
                             {"Portofolio"}
                         </Text>
                     </View>
-                    <View>
-                        <Text style={styles.titleText}>
-                            {"Ivan Jiteng Aribanilia Banon"}
-                        </Text>
-                    </View>
-                    <View>
+                    <View style={styles.inline}>
                         <Image style={styles.imageShow} source={pic}/>
-                    </View>
-                    <View>
-                        <Text numberOfLines={20}>
+                        <Text>
+                            { "Nama : Ivan Jiteng Aribanilia Banon"}
+                            {'\n'}{'\n'}
                             {"Pegawai - CPP Merauke - 2008"}
                             {'\n'}{'\n'}
                             {"Pengelola UPC - CPP Merauke - 2011"}
@@ -46,7 +41,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f2f0f0',
     },
     inline: {
-        backgroundColor: '#d4cdcb'
+        flex: 2,
+        padding: 5,
     },
 
     navigationText: {
@@ -64,7 +60,7 @@ const styles = StyleSheet.create({
     },
 
     imageShow: {
-        width: 260,
-        height: 180
+        width: 100,
+        height: 165,
     }
 });
